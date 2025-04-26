@@ -41,14 +41,14 @@ public class DoctorsActivity extends AppCompatActivity {
         doctorListView = findViewById(R.id.doctorListView);
 
         List<Doctor> doctorList = new ArrayList<>();
-        doctorList.add(new Doctor("Dr. Amina Yusuf", "Cardiologist", R.drawable.doc1));
-        doctorList.add(new Doctor("Dr. Brian Kim", "Neurologist", R.drawable.doc2));
-        doctorList.add(new Doctor("Dr. Clara Lee", "Dermatologist", R.drawable.doc3));
-        doctorList.add(new Doctor("Dr. Daniel Cruz", "Pediatrician", R.drawable.doc1));
-        doctorList.add(new Doctor("Dr. Elena Novak", "Psychiatrist", R.drawable.doc2));
-        doctorList.add(new Doctor("Dr. Farid Ahmed", "Orthopedic", R.drawable.doc3));
-        doctorList.add(new Doctor("Dr. Grace Tan", "Ophthalmologist", R.drawable.doc1));
-        doctorList.add(new Doctor("Dr. Henry Brooks", "ENT Specialist", R.drawable.doc2));
+        doctorList.add(new Doctor("Dr. Amina Nansubuga", "Cardiologist", R.drawable.doc1));
+        doctorList.add(new Doctor("Dr. Brian Okello", "Neurologist", R.drawable.doc2));
+        doctorList.add(new Doctor("Dr. Clare Namutebi", "Dermatologist", R.drawable.doc3));
+        doctorList.add(new Doctor("Dr. Daniel Kaggwa", "Pediatrician", R.drawable.doc1));
+        doctorList.add(new Doctor("Dr. Esther Nabirye", "Psychiatrist", R.drawable.doc2));
+        doctorList.add(new Doctor("Dr. Farouk Musoke", "Orthopedic", R.drawable.doc3));
+        doctorList.add(new Doctor("Dr. Grace Adoch", "Ophthalmologist", R.drawable.doc1));
+        doctorList.add(new Doctor("Dr. Henry Mwesigwa", "ENT Specialist", R.drawable.doc2));
 
         DoctorAdapter adapter = new DoctorAdapter(this, doctorList);
         doctorListView.setAdapter(adapter);

@@ -37,11 +37,13 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:text="Doctors"
+                android:id="@+id/docs"
                 android:textSize="14sp"
                 android:gravity="center"
                 android:textColor="#000000" />
 
             <TextView
+                android:id="@+id/about"
                 android:layout_weight="1"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
@@ -128,7 +130,7 @@
                 android:layout_height="wrap_content"
                 android:padding="16dp">
 
-                <ImageView android:src="@drawable/doc1" android:layout_width="80dp" android:layout_height="80dp" android:background="@drawable/circle_bg"/>
+                <ImageView android:src="@drawable/doc1" android:layout_width="80dp" android:layout_height="80dp" />
 
                 <TextView android:text="Dr. Annie" android:textStyle="bold" android:layout_marginTop="8dp" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
                 <TextView android:text="Physiotherapist" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
@@ -232,7 +234,8 @@
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
                 android:weightSum="2"
-                android:layout_marginBottom="8dp">
+                android:layout_marginTop="8dp"
+               >
 
                 <LinearLayout
                     android:id="@+id/layoutPayment"
@@ -241,6 +244,7 @@
                     android:layout_height="100dp"
                     android:background="@drawable/tile_background"
                     android:gravity="center"
+                    android:layout_marginEnd="8dp"
                     android:orientation="vertical">
 
                     <TextView
@@ -259,7 +263,7 @@
                     android:background="@drawable/tile_background"
                     android:gravity="center"
                     android:orientation="vertical"
-                    android:layout_marginEnd="8dp">
+                    >
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -275,11 +279,13 @@
 
             <!-- Third Row: Chat only -->
             <LinearLayout
+                android:layout_marginTop="8dp"
+
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
                 android:weightSum="2"
-                android:layout_marginBottom="8dp">
+               >
 
                 <LinearLayout
                     android:id="@+id/layoutChat"
@@ -288,6 +294,7 @@
                     android:layout_height="100dp"
                     android:background="@drawable/tile_background"
                     android:gravity="center"
+                    android:layout_marginEnd="8dp"
                     android:orientation="vertical">
 
                     <TextView
@@ -320,6 +327,8 @@
             </LinearLayout>
 
             <LinearLayout
+                android:layout_marginTop="8dp"
+
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
@@ -333,6 +342,7 @@
                     android:layout_height="100dp"
                     android:background="@drawable/tile_background"
                     android:gravity="center"
+                    android:layout_marginEnd="8dp"
                     android:orientation="vertical">
 
                     <TextView

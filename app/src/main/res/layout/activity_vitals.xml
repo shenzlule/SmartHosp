@@ -1,12 +1,64 @@
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
-    android:padding="20dp"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="#E0F7FA">
 
-    <EditText android:id="@+id/heartRate" android:hint="Heart Rate" android:layout_width="match_parent" android:layout_height="wrap_content"/>
-    <EditText android:id="@+id/bloodPressure" android:hint="Blood Pressure" android:layout_width="match_parent" android:layout_height="wrap_content"/>
-    <EditText android:id="@+id/spo2" android:hint="SpO2 Level" android:layout_width="match_parent" android:layout_height="wrap_content"/>
-    <Button android:id="@+id/saveVitals" android:text="Save Vitals" android:layout_width="match_parent" android:layout_height="wrap_content"/>
-</LinearLayout>
+    <LinearLayout
+        android:orientation="vertical"
+        android:gravity="center"
+        android:padding="24dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!-- Title -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Record Vitals"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:textColor="#00796B"
+            android:layout_marginBottom="24dp"/>
+
+        <!-- Heart Rate -->
+        <EditText
+            android:id="@+id/heartRate"
+            android:hint="Heart Rate (bpm)"
+            android:background="@drawable/rounded_edittext"
+            android:padding="16dp"
+            android:layout_marginBottom="16dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <!-- Blood Pressure -->
+        <EditText
+            android:id="@+id/bloodPressure"
+            android:hint="Blood Pressure (mmHg)"
+            android:background="@drawable/rounded_edittext"
+            android:padding="16dp"
+            android:layout_marginBottom="16dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <!-- SpO2 -->
+        <EditText
+            android:id="@+id/spo2"
+            android:hint="SpO2 Level (%)"
+            android:background="@drawable/rounded_edittext"
+            android:padding="16dp"
+            android:layout_marginBottom="24dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <!-- Save Button -->
+        <Button
+            android:id="@+id/saveVitals"
+            android:text="Save Vitals"
+            android:textAllCaps="false"
+            android:backgroundTint="#FF5252"
+            android:textColor="#FFFFFF"
+            android:padding="12dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+</ScrollView>

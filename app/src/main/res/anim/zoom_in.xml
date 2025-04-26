@@ -5,7 +5,7 @@
     android:fromYScale="0.8"
     android:toXScale="1.2"
     android:toYScale="1.2"
-    android:pivotX="50%"
-    android:pivotY="50%"
+    android:pivotX="30%"
+    android:pivotY="30%"
     android:repeatMode="reverse"
     android:repeatCount="1" />

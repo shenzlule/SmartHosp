@@ -72,7 +72,7 @@ public class MainActivity extends AppCompatActivity {
                     startActivity(new Intent(this, AppointmentActivity.class)));
 
             findViewById(R.id.layoutBot).setOnClickListener(v ->
-                    startActivity(new Intent(this, AppointmentActivity.class)));
+                    startActivity(new Intent(this, BotActivity.class)));
 
             findViewById(R.id.layoutPayment).setOnClickListener(v ->
                     startActivity(new Intent(this, PaymentActivity.class)));
@@ -89,6 +89,12 @@ public class MainActivity extends AppCompatActivity {
 
             findViewById(R.id.layoutChat).setOnClickListener(v ->
                     startActivity(new Intent(this, ChatActivity.class)));
+
+        findViewById(R.id.docs).setOnClickListener(v ->
+                startActivity(new Intent(this, DoctorsActivity.class)));
+
+        findViewById(R.id.about).setOnClickListener(v ->
+                startActivity(new Intent(this, AboutActivity.class)));
 
     }
 }

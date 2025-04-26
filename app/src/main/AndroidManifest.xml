@@ -42,6 +42,7 @@
         <activity android:name=".ui.pages.ViewVitalsActivity" />
 
         <activity android:name=".ui.pages.VitalsActivity" />
+        <activity android:name=".ui.pages.AboutActivity" />
 
 
 

@@ -1,0 +1,359 @@
+
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ADE8F4">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp">
+
+        <!-- Top Menu (Simple mimic) -->
+        <LinearLayout
+            android:orientation="horizontal"
+            android:background="#f0f0f0"
+            android:padding="12dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:weightSum="5">
+
+            <!-- Toolbar text items -->
+            <TextView
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Home"
+                android:textSize="14sp"
+                android:gravity="center"
+                android:textColor="#000000" />
+
+            <TextView
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Doctors"
+                android:textSize="14sp"
+                android:gravity="center"
+                android:textColor="#000000" />
+
+            <TextView
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="About"
+                android:textSize="14sp"
+                android:gravity="center"
+                android:textColor="#000000" />
+
+            <TextView
+                android:id="@+id/logout"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="logout"
+                android:textSize="14sp"
+                android:gravity="center"
+                android:textColor="#000000" />
+
+            <!-- Search icon -->
+            <ImageView
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:src="@android:drawable/ic_menu_search"
+                android:contentDescription="Search"
+                android:layout_gravity="center"
+                app:tint="#000000" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/welcomeText"
+            android:text="Welcome"
+            android:textSize="13sp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:layout_marginTop="3dp"
+            android:layout_marginBottom="3dp"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <!-- Appointments and Ratings Section -->
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_marginTop="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <!-- Appointments Box -->
+            <LinearLayout
+                android:orientation="vertical"
+                android:background="#FFFFFF"
+                android:elevation="4dp"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:padding="16dp">
+
+                <TextView android:text="Your Appointments" android:textStyle="bold" android:textSize="18sp" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+
+                <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:gravity="center">
+
+                    <LinearLayout android:orientation="vertical" android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content" android:gravity="center">
+                        <ImageView android:src="@android:drawable/ic_menu_agenda" android:layout_width="48dp" android:layout_height="48dp"/>
+                        <TextView android:text="1 In person" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+                    </LinearLayout>
+
+                    <LinearLayout android:orientation="vertical" android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content" android:gravity="center">
+                        <ImageView android:src="@android:drawable/ic_menu_camera" android:layout_width="48dp" android:layout_height="48dp"/>
+                        <TextView android:text="0 Video" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <Button android:text="+Book appointment" android:backgroundTint="#FF0000" android:textColor="#FFFFFF" android:layout_marginTop="10dp" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+            </LinearLayout>
+
+            <!-- Ratings Box -->
+            <LinearLayout
+                android:orientation="vertical"
+                android:gravity="center"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:padding="16dp">
+
+                <ImageView android:src="@drawable/doc1" android:layout_width="80dp" android:layout_height="80dp" android:background="@drawable/circle_bg"/>
+
+                <TextView android:text="Dr. Annie" android:textStyle="bold" android:layout_marginTop="8dp" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                <TextView android:text="Physiotherapist" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+
+                <TextView android:text="4.0 stars" android:layout_marginTop="4dp" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!-- Available Doctors Section -->
+        <TextView android:text="Available Doctors" android:textStyle="bold" android:textSize="18sp" android:layout_marginTop="20dp" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+
+        <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+
+            <!-- One Doctor Row -->
+            <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:gravity="center_vertical" android:padding="8dp">
+                <ImageView android:src="@drawable/doc2" android:layout_width="40dp" android:layout_height="40dp" />
+                <TextView android:text="Dr. Mercy - Neurologist" android:layout_marginStart="10dp" android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content"/>
+                <Button android:text="View Profile" android:backgroundTint="#FF0000" android:textColor="#FFFFFF" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            </LinearLayout>
+
+            <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:gravity="center_vertical" android:padding="8dp">
+                <ImageView android:src="@drawable/doc3" android:layout_width="40dp" android:layout_height="40dp" />
+                <TextView android:text="Dr. Annette - Cardiologist" android:layout_marginStart="10dp" android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content"/>
+                <Button android:text="View Profile" android:backgroundTint="#FF0000" android:textColor="#FFFFFF" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            </LinearLayout>
+
+            <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:gravity="center_vertical" android:padding="8dp">
+                <ImageView android:src="@drawable/doc1" android:layout_width="40dp" android:layout_height="40dp" />
+                <TextView android:text="Dr. Timothy - Paediatrician" android:layout_marginStart="10dp" android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content"/>
+                <Button android:text="View Profile" android:backgroundTint="#FF0000" android:textColor="#FFFFFF" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            </LinearLayout>
+
+            <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:gravity="center_vertical" android:padding="8dp">
+                <ImageView android:src="@drawable/doc2" android:layout_width="40dp" android:layout_height="40dp" />
+                <TextView android:text="Dr. Winnie - Dentist" android:layout_marginStart="10dp" android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content"/>
+                <Button android:text="View Profile" android:backgroundTint="#FF0000" android:textColor="#FFFFFF" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <!-- First Row: Appointment + Payment -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="2"
+                android:layout_marginBottom="8dp">
+
+                <LinearLayout
+                    android:id="@+id/layoutBot"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="100dp"
+                    android:background="@drawable/tile_background"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:layout_marginEnd="8dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Ask Bot"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:textColor="#000000"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/layoutAppointment"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="100dp"
+                    android:background="@drawable/tile_background"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:layout_marginEnd="8dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Appointments"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:textColor="#000000"/>
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <!-- Second Row: Vitals + Records -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="2"
+                android:layout_marginBottom="8dp">
+
+                <LinearLayout
+                    android:id="@+id/layoutPayment"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="100dp"
+                    android:background="@drawable/tile_background"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Payments"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:textColor="#000000"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/layoutVitals"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="100dp"
+                    android:background="@drawable/tile_background"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:layout_marginEnd="8dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Vitals Monitoring"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:textColor="#000000"/>
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <!-- Third Row: Chat only -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="2"
+                android:layout_marginBottom="8dp">
+
+                <LinearLayout
+                    android:id="@+id/layoutChat"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="100dp"
+                    android:background="@drawable/tile_background"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Chat"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:textColor="#000000"/>
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/layoutRecords"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="100dp"
+                    android:background="@drawable/tile_background"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Health Records"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:textColor="#000000"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="2"
+                android:layout_marginBottom="8dp">
+
+                <LinearLayout
+                    android:id="@+id/layoutViewVitals"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="100dp"
+                    android:background="@drawable/tile_background"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="View Vitals"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:textColor="#000000"/>
+                </LinearLayout>
+
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+</ScrollView>
+
+
+

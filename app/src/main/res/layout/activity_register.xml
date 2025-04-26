@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#B2EBF2">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:gravity="center"
+        android:padding="24dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <!-- Title -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="SmartHosp Register"
+            android:textSize="28sp"
+            android:textStyle="bold"
+            android:textColor="#212121"
+            android:layout_marginBottom="32dp" />
+
+        <!-- Role Selection -->
+        <RadioGroup
+            android:id="@+id/radioUserType"
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="24dp">
+
+            <RadioButton
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:id="@+id/radioPatient"
+                android:text="Patient"
+                android:buttonTint="#00796B"
+                android:textColor="#212121"
+                android:textSize="16sp" />
+
+            <RadioButton
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:id="@+id/radioDoctor"
+                android:text="Doctor"
+                android:buttonTint="#00796B"
+                android:textColor="#212121"
+                android:layout_marginStart="24dp"
+                android:textSize="16sp" />
+        </RadioGroup>
+
+
+        <!-- Email -->
+        <EditText
+            android:id="@+id/inputEmail"
+            android:hint="Email"
+            android:inputType="textEmailAddress"
+            android:background="@drawable/rounded_edittext"
+            android:padding="16dp"
+            android:layout_marginBottom="16dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <!-- Password -->
+        <EditText
+            android:id="@+id/inputPassword"
+            android:hint="Password"
+            android:inputType="textPassword"
+            android:background="@drawable/rounded_edittext"
+            android:padding="16dp"
+            android:layout_marginBottom="24dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <!-- Register Button -->
+        <Button
+            android:id="@+id/btnRegister"
+            android:text="Register"
+            android:textAllCaps="false"
+            android:textColor="#FFFFFF"
+            android:backgroundTint="#FF5252"
+            android:padding="14dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <!-- Login redirect -->
+        <TextView
+            android:id="@+id/alreadyHaveAccount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Already have an account? Login"
+            android:textSize="14sp"
+            android:textColor="#0097A7"
+            android:layout_marginTop="20dp"
+            android:layout_gravity="center"
+            android:onClick="goToLoginScreen" />
+
+    </LinearLayout>
+</ScrollView>

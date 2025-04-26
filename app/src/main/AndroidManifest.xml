@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@drawable/app_icon"
+        android:label="@string/app_name"
+        android:roundIcon="@drawable/app_icon"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Hospitalbookup"
+        tools:targetApi="31">
+
+        <activity
+            android:name=".ui.pages.SplashActivity"
+            android:exported="true"
+            android:theme="@style/Theme.Hospitalbookup">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- Authentication Activities -->
+        <activity android:name=".ui.pages.LoginActivity" />
+        <activity android:name=".ui.pages.RegisterActivity" />
+
+
+        <activity android:name=".ui.pages.AppointmentActivity" />
+        <activity android:name=".ui.pages.BotActivity" />
+
+        <activity android:name=".ui.pages.ChatActivity" />
+        <activity android:name=".ui.pages.DoctorsActivity" />
+
+        <activity android:name=".ui.pages.MainActivity" />
+        <activity android:name=".ui.pages.PaymentActivity" />
+
+        <activity android:name=".ui.pages.RecordsActivity" />
+        <activity android:name=".ui.pages.ViewVitalsActivity" />
+
+        <activity android:name=".ui.pages.VitalsActivity" />
+
+
+
+    </application>
+
+</manifest>

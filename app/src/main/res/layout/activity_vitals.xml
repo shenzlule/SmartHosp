@@ -1,0 +1,12 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:padding="20dp"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <EditText android:id="@+id/heartRate" android:hint="Heart Rate" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+    <EditText android:id="@+id/bloodPressure" android:hint="Blood Pressure" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+    <EditText android:id="@+id/spo2" android:hint="SpO2 Level" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+    <Button android:id="@+id/saveVitals" android:text="Save Vitals" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+</LinearLayout>

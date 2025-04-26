@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#B2EBF2">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:gravity="center"
+        android:padding="24dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!-- Patient Name Input -->
+        <EditText
+            android:id="@+id/editTextPatientName"
+            android:hint="Patient Name"
+            android:background="@drawable/rounded_edittext"
+            android:padding="16dp"
+            android:layout_marginBottom="16dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <!-- Doctor Name Input -->
+        <EditText
+            android:id="@+id/editTextDoctorName"
+            android:hint="Doctor Name"
+            android:background="@drawable/rounded_edittext"
+            android:padding="16dp"
+            android:layout_marginBottom="16dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <!-- Appointment Date Input -->
+        <EditText
+            android:id="@+id/editTextDate"
+            android:hint="Appointment Date"
+            android:background="@drawable/rounded_edittext"
+            android:padding="16dp"
+            android:layout_marginBottom="16dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <!-- Book Appointment Button -->
+        <Button
+            android:id="@+id/buttonBook"
+            android:text="Book Appointment"
+            android:textAllCaps="false"
+            android:backgroundTint="#FF5252"
+            android:textColor="#FFFFFF"
+            android:padding="16dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+</ScrollView>

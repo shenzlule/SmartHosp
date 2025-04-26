@@ -39,7 +39,7 @@
                 android:textStyle="bold"
                 android:textColor="#212121"/>
 
-            <TextView
+          <!--  <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="• John Doe" android:textSize="16sp" android:layout_marginTop="4dp"/>
@@ -54,7 +54,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="• Emma Brown" android:textSize="16sp"/>
+                android:text="• Emma Brown" android:textSize="16sp"/>-->
         </LinearLayout>
 
         <!-- App Info Card -->

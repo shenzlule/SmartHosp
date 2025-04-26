@@ -23,7 +23,7 @@
 
         <!-- Role Selection -->
         <RadioGroup
-            android:id="@+id/radioUserType"
+            android:id="@+id/radioUserTypel"
             android:orientation="horizontal"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -41,7 +41,7 @@
             <RadioButton
                 android:layout_height="wrap_content"
                 android:layout_width="wrap_content"
-                android:id="@+id/radioDoctor"
+                android:id="@+id/checkbox_Doctor"
                 android:text="Doctor"
                 android:buttonTint="#00796B"
                 android:textColor="#212121"

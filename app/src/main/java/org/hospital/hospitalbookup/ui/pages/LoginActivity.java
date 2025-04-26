@@ -8,6 +8,7 @@ import android.view.Window;
 import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.RadioGroup;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -33,11 +34,16 @@ public class LoginActivity extends AppCompatActivity {
 
     SessionManager sessionManager;
 
+    RadioGroup radioUserType;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
         setContentView(R.layout.activity_login);
+
+
+        radioUserType = findViewById(R.id.radioUserTypel);
 
         sessionManager = new SessionManager(getApplicationContext());
 
@@ -82,21 +88,33 @@ public class LoginActivity extends AppCompatActivity {
             String userEmail = email.getText().toString();
             String userPassword = password.getText().toString();
 
+            int selectedRoleId = radioUserType.getCheckedRadioButtonId();
+            String userRole = selectedRoleId == R.id.checkbox_Doctor ? "Doctor" : "Patient";
+
+
             AppDatabase db = AppDatabase.getInstance(getApplicationContext());
             Executors.newSingleThreadExecutor().execute(() -> {
-                User user = db.userDao().login(userEmail, userPassword);
+                User user = db.userDao().login(userEmail, userPassword, userRole);
                 runOnUiThread(() -> {
                     if (user != null) {
-                        sessionManager.login(userEmail); // Save session
+                        sessionManager.login(userEmail,userRole); // Save session
                         Toast.makeText(this, "Login successful", Toast.LENGTH_SHORT).show();
-                        startActivity(new Intent(this, MainActivity.class));
+
+                        // Direct user to their respective dashboard
+                        if ("Doctor".equals(userRole)) {
+                            startActivity(new Intent(this, DocHomeActivity.class));
+                        } else {
+                            startActivity(new Intent(this, MainActivity.class));
+                        }
+
                         finish();
                     } else {
-                        Toast.makeText(this, "Invalid credentials", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(this, "Invalid credentials or role", Toast.LENGTH_SHORT).show();
                     }
                 });
             });
         });
+
     }
 
     // Method to navigate to Register screen

@@ -6,6 +6,8 @@ import android.content.SharedPreferences;
 public class SessionManager {
     private static final String PREF_NAME = "smartcash_session";
     private static final String KEY_EMAIL = "user_email";
+    private static final String KEY_ROLE = "user_role"; // Added for role
+
     private SharedPreferences prefs;
     private SharedPreferences.Editor editor;
 
@@ -14,8 +16,10 @@ public class SessionManager {
         editor = prefs.edit();
     }
 
-    public void login(String email) {
+    // Updated login to accept role
+    public void login(String email, String role) {
         editor.putString(KEY_EMAIL, email);
+        editor.putString(KEY_ROLE, role);
         editor.apply();
     }
 
@@ -30,5 +34,9 @@ public class SessionManager {
 
     public String getUserEmail() {
         return prefs.getString(KEY_EMAIL, null);
+    }
+
+    public String getUserRole() {
+        return prefs.getString(KEY_ROLE, null);
     }
 }

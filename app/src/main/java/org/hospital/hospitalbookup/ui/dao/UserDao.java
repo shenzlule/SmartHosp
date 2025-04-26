@@ -12,9 +12,10 @@ public interface UserDao {
     @Insert
     void insert(User user);
 
-    @Query("SELECT * FROM users WHERE email = :email AND password = :password")
-    User login(String email, String password);
+    @Query("SELECT * FROM users WHERE email = :email AND password = :password AND role = :role")
+    User login(String email, String password, String role);
 
-    @Query("SELECT * FROM users WHERE email = :email")
-    User findByEmail(String email);
+    @Query("SELECT * FROM users WHERE email = :email AND role = :role")
+    User findByEmailAndRole(String email, String role);
+
 }

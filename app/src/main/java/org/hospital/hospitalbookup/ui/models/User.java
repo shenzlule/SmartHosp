@@ -12,6 +12,9 @@ public class User {
     @ColumnInfo(name = "email")
     public String email;
 
-    @ColumnInfo(name = "password")
+
     public String password;
+
+    @ColumnInfo(name = "role")
+    public String role;  // <-- NEW Field to save "Patient" or "Doctor"
 }

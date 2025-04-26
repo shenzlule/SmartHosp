@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#B2EBF2">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:gravity="center_horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!-- Top Menu (Simple mimic) -->
+        <LinearLayout
+            android:orientation="horizontal"
+            android:background="#f0f0f0"
+            android:padding="12dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:weightSum="5">
+
+            <!-- Toolbar text items -->
+            <TextView
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Home"
+                android:textSize="14sp"
+                android:gravity="center"
+                android:textColor="#000000" />
+
+            <TextView
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Schedule"
+                android:id="@+id/docs"
+                android:textSize="14sp"
+                android:gravity="center"
+                android:textColor="#000000" />
+
+            <TextView
+                android:id="@+id/about"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="About"
+                android:textSize="14sp"
+                android:gravity="center"
+                android:textColor="#000000" />
+
+            <TextView
+                android:id="@+id/log_out"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="logout"
+                android:textSize="14sp"
+                android:gravity="center"
+                android:textColor="#000000" />
+
+            <!-- Search icon -->
+            <ImageView
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:src="@android:drawable/ic_menu_search"
+                android:contentDescription="Search"
+                android:layout_gravity="center"
+                app:tint="#000000" />
+        </LinearLayout>
+
+        <!-- Today's Appointments Section -->
+        <TextView
+            android:id="@+id/docAppointmentsTitle"
+            android:text="Today's Appointments"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="12dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp">
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/doc3"
+                android:background="@drawable/circle_background"
+                android:padding="8dp"
+                android:layout_marginEnd="8dp"/>
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/doc2"
+                android:background="@drawable/circle_background"
+                android:padding="8dp"
+                android:layout_marginEnd="8dp"/>
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/doc3"
+                android:background="@drawable/circle_background"
+                android:padding="8dp"
+                android:layout_marginEnd="8dp"/>
+
+            <TextView
+                android:text="+3"
+                android:textSize="18sp"
+                android:gravity="center"
+                android:background="@drawable/circle_background"
+                android:layout_width="40dp"
+                android:layout_height="40dp"/>
+        </LinearLayout>
+
+        <!-- Appointments Summary -->
+        <LinearLayout
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:id="@+id/docTotalAppointmentsTile"
+                android:orientation="vertical"
+                android:background="@drawable/square_tile"
+                android:gravity="center"
+                android:layout_margin="8dp"
+                android:padding="16dp"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content">
+
+                <TextView
+
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:id="@+id/docTotalAppointments" android:text="8" android:textSize="24sp" android:textStyle="bold"/>
+                <TextView
+
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:text="Total Appointments" android:textSize="12sp"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/docInPersonTile"
+                android:orientation="vertical"
+                android:background="@drawable/square_tile"
+                android:gravity="center"
+                android:layout_margin="8dp"
+                android:padding="16dp"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:id="@+id/docInPersonAppointments" android:text="6" android:textSize="24sp" android:textStyle="bold"/>
+                <TextView
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:text="In Person" android:textSize="12sp"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/docVideoTile"
+                android:orientation="vertical"
+                android:background="@drawable/square_tile"
+                android:gravity="center"
+                android:layout_margin="8dp"
+                android:padding="16dp"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:id="@+id/docVideoAppointments" android:text="2" android:textSize="24sp" android:textStyle="bold"/>
+                <TextView
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:text="Video" android:textSize="12sp"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- Personal Scores -->
+        <LinearLayout
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_marginTop="24dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/welcome_Text"
+                android:text="Welcome"
+                android:textSize="13sp"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:layout_marginTop="3dp"
+                android:layout_marginBottom="3dp"
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <ImageView
+                android:src="@drawable/doc1"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:scaleType="centerCrop"
+                android:background="@drawable/circle_background"
+                android:layout_marginBottom="12dp"/>
+
+            <TextView
+
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:id="@+id/docTotalPatients" android:text="250 Total Patients" android:textSize="18sp" android:textStyle="bold" />
+            <TextView
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:id="@+id/docRating" android:text="4.0 ★★★★★" android:textSize="16sp" android:layout_marginTop="4dp"/>
+        </LinearLayout>
+
+        <!-- Notes Section -->
+        <TextView
+            android:text="Notes"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:layout_marginTop="32dp"
+            android:layout_marginBottom="16dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/docNote1"
+                android:text="23/03/24\nEffectiveness of omeprazole drug in treating peptic ulcers..."
+                android:background="@drawable/square_tile"
+                android:padding="16dp"
+                android:layout_marginBottom="8dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <Button
+                android:id="@+id/docAddNoteBtn"
+                android:text="Add Note"
+                android:backgroundTint="#FF5252"
+                android:textColor="#FFFFFF"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>

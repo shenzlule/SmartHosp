@@ -44,6 +44,11 @@
         <activity android:name=".ui.pages.VitalsActivity" />
         <activity android:name=".ui.pages.AboutActivity" />
 
+        <activity android:name=".ui.pages.DocAddNoteActivity" />
+
+        <activity android:name=".ui.pages.DocAppointmentsListActivity" />
+        <activity android:name=".ui.pages.DocHomeActivity" />
+
 
 
     </application>

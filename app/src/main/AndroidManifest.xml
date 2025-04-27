@@ -46,8 +46,14 @@
 
         <activity android:name=".ui.pages.DocAddNoteActivity" />
 
+
         <activity android:name=".ui.pages.DocAppointmentsListActivity" />
         <activity android:name=".ui.pages.DocHomeActivity" />
+
+        <activity android:name=".ui.pages.AppointmentsActivity" />
+        <activity android:name=".ui.pages.BookAppointmentActivity" />
+
+        <activity android:name=".ui.pages.ViewAppointmentsActivity" />
 
 
 

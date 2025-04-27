@@ -69,9 +69,12 @@ public class MainActivity extends AppCompatActivity {
 
 
         findViewById(R.id.layoutAppointment).setOnClickListener(v ->
-                    startActivity(new Intent(this, AppointmentActivity.class)));
+                    startActivity(new Intent(this, ViewAppointmentsActivity.class)));
 
-            findViewById(R.id.layoutBot).setOnClickListener(v ->
+        findViewById(R.id.BookBtn).setOnClickListener(v ->
+                startActivity(new Intent(this, AppointmentActivity.class)));
+
+        findViewById(R.id.layoutBot).setOnClickListener(v ->
                     startActivity(new Intent(this, BotActivity.class)));
 
             findViewById(R.id.layoutPayment).setOnClickListener(v ->

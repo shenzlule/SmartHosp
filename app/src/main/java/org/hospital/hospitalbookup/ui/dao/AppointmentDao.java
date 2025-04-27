@@ -14,5 +14,5 @@ public interface AppointmentDao {
     void insert(Appointment appointment);
 
     @Query("SELECT * FROM Appointment")
-    List<Appointment> getAll();
+    List<Appointment> getAllAppointments();  // ✨ make the method name match
 }

@@ -118,7 +118,9 @@
 
                 </LinearLayout>
 
-                <Button android:text="+Book appointment" android:backgroundTint="#FF0000" android:textColor="#FFFFFF" android:layout_marginTop="10dp" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+                <Button
+                    android:id="@+id/BookBtn"
+                    android:text="+Book appointment" android:backgroundTint="#FF0000" android:textColor="#FFFFFF" android:layout_marginTop="10dp" android:layout_width="match_parent" android:layout_height="wrap_content"/>
             </LinearLayout>
 
             <!-- Ratings Box -->
